@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <title>Skinsense - Coming</title>
+  <link href="src/output.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="light">
+    <!-- Navbar -->
+    <header class="z-50 bg-white shadow">
+      <nav class="container flex items-center justify-between p-4 mx-auto">
+        <div class="flex items-center">
+          <img src="assets/logoo.png" class="w-8 h-auto" alt="Skinsense Logo" />
+          <span class="ml-2 text-xl font-semibold text-gray-800">Skinsense</span>
+        </div>
+        <div class="hidden space-x-4 md:flex">
+          <a href="home" class="text-gray-600 hover:text-gray-800">Home</a>
+          <a href="about" class="text-gray-600 hover:text-gray-800">About</a>
+          <a href="feature" class="text-gray-600 hover:text-gray-800">Feature</a>
+          <a href="blogs" class="text-gray-600 hover:text-gray-800">Blog</a>
+        </div>
+        <div class="hidden md:flex">
+          <a href="#" class="text-gray-600 hover:text-gray-800">Sign In</a>
+        </div>
+        <button id="menu-toggle" class="w-8 h-8 md:hidden">
+          <!-- Hamburger Menu -->
+          <svg id="hamburger-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 6H20M4 12H20M4 18H20" stroke="#000000" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+          <!-- Close Menu -->
+          <svg id="close-icon" class="hidden" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 6H20M4 12H14M4 18H9" stroke="#000000" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="fixed inset-0 z-50 hidden w-3/4 max-h-screen duration-300 ease-in-out bg-[#0047B3]">
+      <div class="flex flex-col h-full">
+        <div class="flex p-4 mt-10">
+          <div class="flex items-center justify-between">
+            <img src="assets/LogoPutih.png" class="w-8 h-auto" alt="Skinsense Logo" />
+            <span class="ml-2 text-xl font-semibold text-gray-100">Skinsense</span>
+          </div>
+          <button id="close-sidebar" class="absolute bg-white rounded-full shadow-lg w-11 h-11 -right-6">
+            <svg viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+              fill="#000000">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <title>cross-circle</title>
+                <desc>Created with Sketch Beta.</desc>
+                <defs> </defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                  <g id="Icon-Set-Filled" sketch:type="MSLayerGroup" transform="translate(-570.000000, -1089.000000)"
+                    fill="#0047B3">
+                    <path
+                      d="M591.657,1109.24 C592.048,1109.63 592.048,1110.27 591.657,1110.66 C591.267,1111.05 590.633,1111.05 590.242,1110.66 L586.006,1106.42 L581.74,1110.69 C581.346,1111.08 580.708,1111.08 580.314,1110.69 C579.921,1110.29 579.921,1109.65 580.314,1109.26 L584.58,1104.99 L580.344,1100.76 C579.953,1100.37 579.953,1099.73 580.344,1099.34 C580.733,1098.95 581.367,1098.95 581.758,1099.34 L585.994,1103.58 L590.292,1099.28 C590.686,1098.89 591.323,1098.89 591.717,1099.28 C592.11,1099.68 592.11,1100.31 591.717,1100.71 L587.42,1105.01 L591.657,1109.24 L591.657,1109.24 Z M586,1089 C577.163,1089 570,1096.16 570,1105 C570,1113.84 577.163,1121 586,1121 C594.837,1121 602,1113.84 602,1105 C602,1096.16 594.837,1089 586,1089 L586,1089 Z"
+                      id="cross-circle" sketch:type="MSShapeGroup"> </path>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-col flex-grow mx-4">
+          <div class="flex flex-col">
+            <a href="home" class="py-2 text-lg text-white">Home</a>
+            <a href="feature" class="py-2 text-lg text-white">Feature</a>
+            <a href="blog" class="py-2 text-lg text-white">Blog</a>
+            <a href="support" class="py-2 text-lg text-white">Support</a>
+          </div>
+          <a href="#"
+            class="flex items-center justify-center w-full py-2 mt-auto mb-5 text-lg text-blue-500 bg-white rounded-lg">Sign
+            In</a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Hero Section -->
+    <div class="container px-6 pt-2 mx-auto lg:px-8">
+      <div
+        class="grid items-center justify-between w-full grid-cols-1 gap-8 py-10 mx-auto md:max-w-6xl xl:max-w-full lg:grid-cols-2 md:py-11 ">
+        <div class="text-left hero-text">
+          <h1 class="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl">- Coming Soon</h1>
+          <p class="mt-4 text-3xl font-semibold tracking-tight text-gray-900 sm:text-2xl">Don't miss out on our upcoming
+            app
+            release!!!</p>
+          <p class="mt-8 text-lg font-medium text-gray-500 sm:text-xl/8">
+            Discover the secret to healthy, glowing skin with our personalized skincare app. Simply scan your face to
+            uncover your unique skin profile and receive tailored product recommendations. Our AI-powered technology
+            analyzes your skin's specific needs, providing you with the most effective skincare routine.
+          </p>
+          <a href="#"
+            class="inline-block w-full px-8 py-3 mt-8 text-lg font-semibold text-center text-white transition-all duration-300 bg-blue-700 rounded-lg md:w-auto hover:bg-blue-700">
+            Download
+          </a>
+        </div>
+        <div class="flex justify-center hero-image">
+          <img src="assets/skinsense.png" class="w-full max-w-md" alt="Skinsense App">
+        </div>
+      </div>
+    </div>
+    <!-- Feature -->
+    <div class="container relative mx-auto">
+
+      <div class="relative lg:h-[530px] mx-6 overflow-hidden rounded-3xl bg-slate-900 py-9">
+        <h3 class="z-50 mb-6 text-base font-medium text-center text-white md:text-xl lg:text-3xl md:mb-10 lg:md-20">
+          We Made Scanning Skin <span class="z-10 text-blue-500">Easier!</span>
+        </h3>
+        <!-- ring -->
+         <div class="absolute left-0 right-0 z-10 flex items-center justify-center top-16 lg:top-20 ">
+          <div class="flex justify-center items-center w-[664px] h-[664px]  bg-transparent border-2 border-gray-500 rounded-full">
+            <div class="flex justify-center items-center w-[600px] h-[600px] bg-transparent border-2 border-gray-500 rounded-full">
+              <div class=" w-[548px] h-[548px] bg-transparent border-2 border-gray-500 rounded-full"></div>
+            </div>
+          </div>
+        </div>
+        <div class="container z-10 flex items-center justify-center mx-auto lg:hidden " id="featuresContainer">
+          <div class="grid grid-cols-1 gap-5 lg:grid-cols-3" id="featuresGrid">
+            <div class="z-10 flex flex-col items-center justify-center p-5 bg-gray-200 tems-center rounded-xl lg:top-20"
+              onclick="zoomImage('assets/product.png')">
+              <h4 class="mb-4 text-lg font-semibold text-center text-slate-900">Recommend Product Skincare</h4>
+              <img src="assets/katalog-product-screen.png" alt="Recommend Product Skincare" class="w-[200px]" />
+            </div>
+            <div class="z-10 flex flex-col items-center justify-center p-5 my-10 bg-gray-200 rounded-xl"
+              onclick="zoomImage('assets/product.png')">
+              <h4 class="mb-4 text-lg font-semibold text-center text-slate-900">Detection Your Skin</h4>
+              <img src="assets/scan-screen.png" alt="Detection Your Skin" class="w-[200px]" />
+            </div>
+            <div class="z-10 flex flex-col items-center justify-center p-5 bg-gray-200 tems-center rounded-xl"
+              onclick="zoomImage('assets/product.png')">
+              <h4 class="mb-4 text-lg font-semibold text-center text-slate-900">Tracking Your Progress</h4>
+              <img src="assets/home-screen.png" alt="Tracking Your Progress" class="w-[200px]" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- featureGrid pc -->
+      <div class="container absolute left-0 right-0 z-10 items-center justify-center hidden mx-auto lg:flex top-28 " id="featuresContainer">
+        <div class="grid grid-cols-1 gap-5 lg:grid-cols-3" id="featuresGrid">
+          <div class="z-10 flex flex-col items-center justify-center p-5 bg-gray-200 tems-center rounded-xl lg:top-20"
+            onclick="zoomImage('assets/product.png')">
+            <h4 class="mb-4 text-lg font-semibold text-center text-slate-900">Recommend Product Skincare</h4>
+            <img src="assets/katalog-product-screen.png" alt="Recommend Product Skincare" class="w-[200px]" />
+          </div>
+          <div class="relative z-10 flex flex-col items-center justify-center p-5 bg-gray-200 top-10 rounded-xl"
+            onclick="zoomImage('assets/product.png')">
+            <h4 class="mb-4 text-lg font-semibold text-center text-slate-900">Detection Your Skin</h4>
+            <img src="assets/scan-screen.png" alt="Detection Your Skin" class="w-[200px]" />
+          </div>
+          <div class="z-10 flex flex-col items-center justify-center p-5 bg-gray-200 tems-center rounded-xl"
+            onclick="zoomImage('assets/product.png')">
+            <h4 class="mb-4 text-lg font-semibold text-center text-slate-900">Tracking Your Progress</h4>
+            <img src="assets/home-screen.png" alt="Tracking Your Progress" class="w-[200px]" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Coming Soon Section -->
+    <div class="bg-[#F7F7F7] mt-10 lg:mt-40 ">
+      <div class="max-w-6xl px-4 py-16 mx-auto">
+        <h2 class="mb-16 text-4xl font-semibold text-center text-gray-800">To be released soon...</h2>
+        <div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
+          <!-- Left: App Store and Google Play Buttons -->
+          <div class="flex items-center justify-center md:hidden">
+            <img src="assets/splash-screen.png" alt="phone" class="w-[200px]">
+          </div>
+          <div class="flex flex-col items-center justify-center gap-4 ">
+
+
+            <!-- Google Play Button -->
+            <a href="#" class="flex justify-between gap-4 px-8 py-2 bg-black rounded-lg min-w-64 max-w-64">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36px" fill="#fff" class="inline" viewBox="0 0 64 64">
+                <path fill="#57cef3" d="M7 3v58l33-29z" />
+                <path fill="#fff200" d="m36 32 8-10 15 10-15 10z" />
+                <path fill="#48ff48" d="M36 32 7 3h4l34 20z" />
+                <path fill="#ff6c58" d="M36 32 7 61h4l34-20z" />
+                <path fill="#f33"
+                  d="M9.1 64c-1.9 0-3.6-1-4.5-2.6L8 58.2v.7c0 .3.1.6.3.8L24 44c7.4 0 14.1-1.2 18.3-3.1l5.8-3.4v4.6L11.7 63.3c-.7.5-1.6.7-2.6.7z" />
+                <path fill="#0779e4"
+                  d="M9.1 4C8.5 4 8 4.5 8 5.1V36c0 4.4 7.2 8 16 8L5.5 62.5c-.9-.9-1.5-2.2-1.5-3.6V5.1C4 2.3 6.3 0 9.1 0z" />
+                <path fill="#314a52"
+                  d="M8.3 4.3c.2-.2.5-.3.8-.3.2 0 .4.1.6.2l45.5 26.6c.5.2.8.7.8 1.2s-.3 1-.7 1.3l-11.4 6.6 2.9 2.9 10.4-6.1c1.7-1 2.7-2.8 2.7-4.7s-1-3.8-2.7-4.7L11.7.7C11 .2 10.1 0 9.1 0 7.7 0 6.4.6 5.5 1.5z" />
+              </svg>
+              <div class="flex flex-col items-start justify-between w-max">
+                <p class="text-lg text-left text-white">Get it on</p>
+                <p class="text-2xl text-left text-white">Google Play</p>
+              </div>
+            </a>
+
+            <!-- App Store Button -->
+            <a href="#" class="flex justify-between gap-4 px-8 py-2 bg-black rounded-lg min-w-64 max-w-64">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36px" fill="#fff" class="inline"
+                viewBox="0 0 22.773 22.773">
+                <path
+                  d="M15.769 0h.162c.13 1.606-.483 2.806-1.228 3.675-.731.863-1.732 1.7-3.351 1.573-.108-1.583.506-2.694 1.25-3.561C13.292.879 14.557.16 15.769 0zm4.901 16.716v.045c-.455 1.378-1.104 2.559-1.896 3.655-.723.995-1.609 2.334-3.191 2.334-1.367 0-2.275-.879-3.676-.903-1.482-.024-2.297.735-3.652.926h-.462c-.995-.144-1.798-.932-2.383-1.642-1.725-2.098-3.058-4.808-3.306-8.276v-1.019c.105-2.482 1.311-4.5 2.914-5.478.846-.52 2.009-.963 3.304-.765.555.086 1.122.276 1.619.464.471.181 1.06.502 1.618.485.378-.011.754-.208 1.135-.347 1.116-.403 2.21-.865 3.652-.648 1.733.262 2.963 1.032 3.723 2.22-1.466.933-2.625 2.339-2.427 4.74.176 2.181 1.444 3.457 3.028 4.209z" />
+              </svg>
+              <div class="flex flex-col items-start w-max">
+                <p class="text-lg text-left text-white">Get it on</p>
+                <p class="text-2xl text-left text-white">Apps Store</p>
+              </div>
+            </a>
+          </div>
+          <div class="items-center justify-center hidden md:flex">
+            <img src="assets/splash-screen.png" alt="phone" class="w-[200px]">
+          </div>
+
+
+          <div class="flex items-center justify-start w-full text-left">
+            <p class="mb-6 text-gray-700" style="font-size: 18px;">
+              Achieve flawless skin with Skinsense! Get personalized skincare solutions with advanced technology. Say
+              goodbye to guesswork and hello to a routine that works. Enjoy clear, glowing skin with Skinsense!<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Countdown Section -->
+    <div class="container mx-auto mt-10">
+      <div class="px-4">
+        <h2 class="text-3xl font-bold text-center text-slate-900">Skinsense is Coming Soon!</h2>
+        <p class="mb-6 text-sm text-center lg:text-base text-slate-400 ">Don't miss out on the release of our groundbreaking skincare
+          app. Stay tuned!
+        </p>
+
+        <!-- Timer -->
+        <div id="timer" class="flex items-center justify-center gap-4 mb-5">
+          <div class="flex flex-col items-center justify-center w-20 h-24 col-span-1 gap-2 rounded-2xl bg-slate-900">
+            <span id="days" class="text-3xl font-medium text-center text-white">00</span>
+            <span class="text-sm font-medium text-center text-white">Days</span>
+          </div>
+          <div class="flex flex-col items-center justify-center w-20 h-24 col-span-1 gap-2 rounded-2xl bg-slate-900">
+            <span id="hours" class="text-3xl font-medium text-center text-white">00</span>
+            <span class="text-sm font-medium text-center text-white">Hours</span>
+          </div>
+          <div class="flex flex-col items-center justify-center w-20 h-24 col-span-1 gap-2 rounded-2xl bg-slate-900">
+            <span id="minutes" class="text-3xl font-medium text-center text-white">00</span>
+            <span class="text-sm font-medium text-center text-white">Minutes</span>
+          </div>
+          <div class="flex flex-col items-center justify-center w-20 h-24 col-span-1 gap-2 rounded-2xl bg-slate-900">
+            <span id="seconds" class="text-3xl font-medium text-center text-white">00</span>
+            <span class="text-sm font-medium text-center text-white">Seconds</span>
+          </div>
+        </div>
+
+        <!-- Notify Me Section -->
+        <div class="flex flex-col items-center mt-12 mb-10 notify-me ">
+          <div class="flex w-full max-w-md">
+            <input type="email" id="email" placeholder="Enter your email to get notified"
+              class="flex-grow px-4 py-2 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+            <button class="px-4 py-2 ml-2 text-white transition duration-200 bg-blue-600 rounded-r-lg hover:bg-blue-700"
+              onclick="notifyMe()">Notify Me</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Footer Section -->
+    <footer class="py-10 mx-4 mt-auto text-gray-600 bg-gray-200 rounded-t-lg md:mx-8">
+      <div class="w-full max-w-screen-xl p-4 py-6 mx-auto lg:py-8">
+        <div class="md:flex md:justify-between">
+          <div class="mb-6 md:mb-0">
+            <a href="" class="flex items-center">
+              <img src="assets/logoo.png" class="h-8 mr-4" alt="Skinsense Logo" />
+              <span class="self-center text-2xl font-semibold whitespace-nowrap :text-white">Skinsense</span>
+            </a>
+            <p class="mt-2 mb-4 text-base text-left text-gray-600">
+              Reveal your best skin with Skinsense! Get personalized skincare <br>
+              insights and routines tailored just for you. Healthy skin is just one scan away!
+            </p>
+          </div>
+          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase :text-white">About</h2>
+              <ul class="font-medium text-gray-500 :text-gray-400">
+                <li>
+                  <a href="#" class="hover:underline">Skincare</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline">Result Scanning</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline">Your Planning</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase :text-white">Follow us</h2>
+              <ul class="font-medium text-gray-500 :text-gray-400">
+                <li>
+                  <a href="#" class="hover:underline">Github</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline">Discord</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase :text-white">Support</h2>
+              <ul class="font-medium text-gray-500 :text-gray-400">
+                <li>
+                  <a href="#" class="hover:underline">Help Center</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline">Account Information</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline">Early Access</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline">Talk to Support</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright Text -->
+        <div class="mt-6 text-left">
+          <span class="text-sm text-gray-500 sm:text-center :text-gray-400">
+            © 2024 <a href="https://flowbite.com/" class="hover:underline">Skinsense™</a>. All Rights Reserved.
+          </span>
+        </div>
+      </div>
+      <div class="relative">
+        <div
+          class="absolute bottom-0 flex mt-4 mb-4 mr-4 space-x-5 -z-20 sm:justify-center md:mt-0 rtl:space-x-reverse right-4">
+          <a href="#" class="text-gray-400 hover:text-gray-900 :hover:text-white">
+            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              viewBox="0 0 8 19">
+              <path fill-rule="evenodd"
+                d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                clip-rule="evenodd" />
+            </svg>
+            <span class="sr-only">Facebook page</span>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-gray-900 :hover:text-white">
+            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              viewBox="0 0 21 16">
+              <path
+                d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z" />
+            </svg>
+            <span class="sr-only">Discord community</span>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-gray-900 :hover:text-white">
+            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              viewBox="0 0 20 17">
+              <path fill-rule="evenodd"
+                d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z"
+                clip-rule="evenodd" />
+            </svg>
+            <span class="sr-only">Twitter page</span>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-gray-900 :hover:text-white">
+            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+                clip-rule="evenodd" />
+            </svg>
+            <span class="sr-only">GitHub account</span>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-gray-900 :hover:text-white">
+            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.582-3.108c-.569-.189-1.106-.304-1.676-.377-.138-.93-.464-1.694-.869-2.398a5.72 5.72 0 0 0-1.474 1.88 4.62 4.62 0 0 0-1.587-.542 5.02 5.02 0 0 0-1.242-.155c-.63 0-1.236.119-1.802.325-.24-.597-.53-1.143-.869-1.64.393.15.742.348 1.063.601-.8-.348-1.503-.755-2.164-1.264-.027.073-.056.146-.085.219-.779 1.402.209 3.236 1.741 4.07a6.68 6.68 0 0 1-4.035 1.204c-.563 1.017-.492 2.394.243 3.451 1.142 1.467 2.876 1.76 4.4 1.083a5.9 5.9 0 0 0 4.087-5.255c0-.152.003-.302-.021-.454.72-.424 1.106-.92 1.42-1.52a6.453 6.453 0 0 0-1.34-.239c-.97.263-1.924.646-2.828 1.131-.136-.269-.334-.52-.576-.759-.674.815-.542 1.493-.118 2.217.278-.043.552-.084.826-.132a5.85 5.85 0 0 0 1.385-2.031 5.553 5.553 0 0 0-1.294-.509c-.548-.053-1.089.106-1.536.395.067.123-.016.272-.138.363a3.814 3.814 0 0 0 1.48 2.015c-.62-.128-1.01-.356-1.576-.597.524.537.916 1.167 1.132 1.9.277-.165.567-.332.831-.498-.342.42-.7.837-1.016 1.288-.339-.442-.648-.903-1.049-1.352.639.634 1.292 1.165 1.879 1.746 1.527-.651 2.623-1.775 2.622-3.243-.011-1.397-1.278-2.383-2.475-3.369a6.038 6.038 0 0 0-.916-.656.816.816 0 0 0 .49-.395c.432.335.846.706 1.267 1.097a4.848 4.848 0 0 0-2.298-3.026 6.335 6.335 0 0 0 1.922-2.287c.268.72.671 1.354 1.176 1.935a6.64 6.64 0 0 0-.789-.741 5.9 5.9 0 0 0 2.395.242A5.732 5.732 0 0 0 16.613 4.614Z"
+                clip-rule="evenodd" />
+            </svg>
+            <span class="sr-only">Telegram</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+</body>
+<script src="script.js"></script>
+
+</html>
